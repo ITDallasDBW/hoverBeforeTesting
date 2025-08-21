@@ -1,0 +1,99 @@
+/* font-family: "Inter", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+header {
+    font-weight: 700;
+}
+footer {
+    font-weight: 700;
+}
+.outer {
+    background-color: antiquewhite;
+    position: relative;
+    z-index: 1;
+}
+.outer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Example: semi-transparent black overlay */
+    opacity: 0;
+        z-index: 2;
+}
+.inner {
+    background-color: bisque;
+    position: relative;
+        z-index: 1;
+}
+.inner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Example: semi-transparent black overlay */
+    opacity: 0;
+        z-index: 2;
+}
+.wrapper {
+    background-color: blue;
+    position: relative;
+        z-index: 1;
+}
+.wrapper:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Example: semi-transparent black overlay */
+    opacity: 0;
+    z-index: 2;
+}
+.imagine {
+    background-color: blueviolet;
+    position: relative;
+        z-index: 1;
+}
+.imagine:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Example: semi-transparent black overlay */
+    opacity: 0;
+        z-index: 2;
+}
+
+/* This works */
+.imagine:hover {
+    transform: scale(1.2);
+}
+
+/* This doesn't work */
+.wrapper:hover .imagine:before {
+    opacity: 0.7;
+}
+.imagine:hover .wrapper:before {
+    opacity: 0.7;
+}
+
+
+/* Example for * before */
+.parent-element::before {
+    content: ""; /* Essential for pseudo-elements to render */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Add other styles for the overlay, e.g., background-color, opacity */
+    background-color: rgba(0, 0, 0, 0.5); /* Example: semi-transparent black overlay */
+    z-index: 1; /* Adjust as needed to control stacking order */
+}
