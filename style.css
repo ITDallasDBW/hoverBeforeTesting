@@ -75,14 +75,24 @@ footer {
 .imagine:hover {
     transform: scale(1.2);
 }
+.outer:hover .imagine {
+    opacity: 0.7;
+}
 
 /* This doesn't work */
-.wrapper:hover .imagine:before {
+/* .wrapper:hover .imagine:before {
     opacity: 0.7;
-}
-.imagine:hover .wrapper:before {
+} */
+/* .imagine:hover .wrapper:before {
     opacity: 0.7;
-}
+} */
+/* .imagine:hover .wrapper {
+    opacity: .1;
+} */
+/* .outer:hover .imagine:before {
+    opacity: 0.7;
+} */
+
 
 
 /* Example for * before */
